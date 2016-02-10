@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>To Do List App</title>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="listApp.css" />
+  </head>
+  <body>
+    <div id="page">
+      <h1 id="header">My To Do App</h1>
+      <h2>Things To Do <span id="counter"></span></h2>
+      <ul>
+        <li id="one">Read about jQuery</li>
+        <li id="two">Do the homework</li>
+        <li id="three">Visit Mary for office hours</li>
+        <li id="four">Come to class ready to go!</li>
+      </ul>
+      <div id="newItemButton"><button href="#" id="showForm">new item</button></div>
+      <form id="newItemForm">
+        <input type="text" id="itemDescription" placeholder="Add description" />
+        <input type="submit" id="add" value="add" />
+      </form>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

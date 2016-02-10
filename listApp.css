@@ -1,0 +1,263 @@
+@import url(http://fonts.googleapis.com/css?family=Oswald);
+body {
+    background-color: #000;
+    font-family: 'Oswald', 'Futura', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#page {
+    background-color: #034500;
+    margin: 0 auto 0 auto;
+    position: relative;
+    text-align: center;
+    border-radius: 3%;
+}
+
+
+/* Responsive page rules at bottom of style sheet */
+
+h1 {
+    color: #FFD0AA;
+    text-align: center;
+    height: 75px;
+    line-height: 75px;
+    margin: 0 auto 0 auto;
+    padding: 30px 10px 20px 10px;
+    text-shadow: 2px 2px 1px #804415;
+}
+
+h2 {
+    color: #FFD0AA;
+    font-size: 24px;
+    font-weight: normal;
+    text-align: center;
+    letter-spacing: .3em;
+    display: inline-block;
+    margin: 0 0 23px 0;
+    text-shadow: 2px 2px 1px #804415;
+}
+
+h2 span {
+    color: #FFD0AA;
+    background-color: #804415;
+    font-size: 12px;
+    text-align: center;
+    letter-spacing: 0;
+    display: inline-block;
+    position: relative;
+    border-radius: 50%;
+    top: -5px;
+    height: 22px;
+    width: 26px;
+    padding: 4px 0 0 0;
+    text-shadow: none;
+}
+
+ul {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    background-color: #5AAC56;
+    color: #FFD0AA;
+    border-top: 1px solid #156711;
+    border-bottom: 1px solid #552600;
+    font-size: 24px;
+    letter-spacing: .05em;
+    list-style-type: none;
+    text-shadow: 2px 2px 1px #328A2E;
+    text-align: left;
+    height: 50px;
+    padding-left: 1em;
+    padding-top: 10px;
+}
+
+li a {
+    color: #fff;
+    text-decoration: none;
+    padding-right: 36px;
+}
+
+.complete {
+    background-color: #999;
+    color: #fff;
+    background-image: url("../images/icon-trash.png");
+    background-position: right, center;
+    background-repeat: no-repeat;
+    border-top: 1px solid #666;
+    border-bottom: 1px solid #b0b0b0;
+    text-shadow: 2px 2px 1px #333;
+}
+
+.complete:before {
+    font-family: FontAwesome;
+    padding-right: 15px;
+    content: "\f014";
+}
+
+.complete a {
+    display: block;
+}
+
+
+/* FORM STYLES */
+
+form {
+    padding: 0 20px 20px 20px;
+}
+
+label {
+    color: #fff;
+    display: block;
+    margin: 10px 0 10px 0;
+    font-size: 24px;
+}
+
+input[type='text'],
+input[type='password'],
+textarea {
+    background-color: #FFD0AA;
+    color: #804415;
+    font-size: 24px;
+    width: 96%;
+    padding: 4px 6px;
+    border: 1px solid #999;
+    border-radius: 8px;
+}
+
+input[type='submit'],
+a.add,
+button,
+a.show {
+    background-color: #804415;
+    color: #FFD0AA;
+    border-radius: 8px;
+    border: none;
+    padding: 8px 10px;
+    margin-top: 10px;
+    font-family: 'Oswald', 'Futura', sans-serif;
+    font-size: 18px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+input[type='submit'],
+a.add,
+button {
+    float: right;
+}
+
+input[type='text']:focus,
+input[type='password']:focus,
+textarea:focus {
+    border: 1px solid #fff;
+    background-color: #fff;
+    outline: none;
+}
+
+input[type='submit']:hover,
+a.add:hover,
+a.show:hover {
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+}
+
+::-webkit-input-placeholder {
+    color: #034500;
+    font-family: arial, sans-serif;
+}
+
+:-moz-placeholder {
+    /* Firefox 18- */
+    color: #034500;
+    font-family: arial, sans-serif;
+}
+
+::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #034500;
+    font-family: arial, sans-serif;
+}
+
+:-ms-input-placeholder {
+    color: #034500;
+    font-family: arial, sans-serif;
+}
+
+a.show {
+    font-size: 12px;
+    padding: 5px;
+    letter-spacing: 0;
+    position: relative;
+    top: -5px;
+    left: 10px;
+}
+
+
+/* form example */
+
+#newItemButton {
+    padding: 10px 20px 75px 20px;
+    display: none;
+}
+
+#newItemForm {
+    padding-top: 20px;
+}
+
+#itemDescription {
+    width: 360px;
+}
+
+#newItemForm input[type='submit'] {
+    margin-top: 0;
+    text-align: left;
+}
+
+#footer {
+    background: none;
+    color: #fff;
+}
+
+
+/* Small screen:mobile */
+
+@media only screen and (max-width: 500px) {
+    body {
+        background-color: #034500;
+    }
+    #page {
+        max-width: 480px;
+    }
+}
+
+@media only screen and (min-width: 501px) and (max-width: 767px) {
+    #page {
+        max-width: 480px;
+        margin: 20px auto 20px auto;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+    #page {
+        max-width: 480px;
+        margin: 20px auto 20px auto;
+    }
+}
+
+
+/* Larger screens act like a demo for the app */
+
+@media only screen and (min-width: 960px) {
+    #page {
+        max-width: 480px;
+        margin: 20px auto 20px auto;
+    }
+}
+
+
+}

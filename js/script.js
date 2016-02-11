@@ -23,15 +23,25 @@ $(function() {
     $('#add').on('click', function(e){
         e.preventDefault();
         var text = $('#itemDescription').val();
-        $ul.append('<li>' + text + '</li>');
+        var $newItem = $('<li>' + text + '</li>');
+        $newItem.on('click', function(){
+            var $li = $(this);
+            completeItem($li);
+        });
+        $ul.append($newItem);
         $('#itemDescription').val('');
         updateItemCount();
         $('#newItemButton').show();
         $('#newItemForm').hide();
     });
     
-    $('li').on('click', function() {
+    $('li').on('click', function(){
         var $li = $(this);
+        completeItem($li);
+    })
+    
+    
+    function completeItem($li) {
         if ($li.hasClass('complete')) {
             $li.animate({
                 opacity: 0.0,
@@ -42,8 +52,8 @@ $(function() {
             });
         } else {
             $li.addClass('complete');
-            $ul.append($li);
+            $ul.append($li).hide().fadeIn(300);
         }
-    });
+    };
     
 });

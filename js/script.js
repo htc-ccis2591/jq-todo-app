@@ -20,11 +20,11 @@ updateItemCount();
 
 
 $('#newItemButton').show();
-$('newItemForm').hide();
+$('#newItemForm').hide();
 
 $('showForm').on("click", function(){
-    $("newItemButton").hide();
-    $("newItemForm").show();
+    $("#newItemButton").hide();
+    $("#newItemForm").show();
 });
   
     //New List Item and addit when we click the add button. 
@@ -32,10 +32,10 @@ $('showForm').on("click", function(){
         e.preventDefault();
         var text = $('#itemDescription').val();
         $list.append("<li>"+ text + "</li>");
-        $("itemDescription").val("");
+        $("#itemDescription").val("");
         updateItemCount();
-        $("newItemForm").hide();
-        $("newItemButton").show();
+        $("#newItemForm").hide();
+        $("#newItemButton").show();
         
     });
     
